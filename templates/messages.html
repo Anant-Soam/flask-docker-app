@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Messages</title></head>
+<body>
+    <h1>Messages</h1>
+    <form method="post">
+        <input type="text" name="message" placeholder="Enter a message" required>
+        <input type="submit" value="Add">
+    </form>
+    <ul>
+        {% for m in messages %}
+            <li>{{ m.text }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Home</a>
+</body>
+</html>
